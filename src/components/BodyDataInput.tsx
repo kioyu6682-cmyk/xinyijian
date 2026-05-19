@@ -25,8 +25,8 @@ const BodyDataInput: React.FC<BodyDataInputProps> = ({ initialData, onBodyDataCh
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const bodyData: BodyData = {
-      height: height ? parseInt(height) : undefined,
-      weight: weight ? parseInt(weight) : undefined,
+      height: height ? parseInt(height) : 0,
+      weight: weight ? parseInt(weight) : 0,
       bodyType,
       waist: waist ? parseInt(waist) : undefined,
       hips: hips ? parseInt(hips) : undefined,

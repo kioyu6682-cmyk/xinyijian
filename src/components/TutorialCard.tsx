@@ -9,7 +9,7 @@ interface TutorialCardProps {
   views: number;
 }
 
-const TutorialCard: React.FC<TutorialCardProps> = ({ id, title, description, category, imageUrl, views }) => {
+const TutorialCard: React.FC<TutorialCardProps> = ({ title, description, category, imageUrl, views }) => {
   return (
     <div className="tutorial-card bg-white rounded-lg shadow-sm overflow-hidden">
       <div className="relative">

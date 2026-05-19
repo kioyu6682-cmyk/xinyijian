@@ -139,7 +139,7 @@ const formatWeatherResponse = (city: string, condition: string, temperature: num
   return responseList[Math.floor(Math.random() * responseList.length)];
 };
 
-const getOutfitSuggestion = (_city?: string, userMessage?: string): string => {
+const getOutfitSuggestion = (_city?: string | null, userMessage?: string): string => {
   const colors = ['红色', '蓝色', '黑色', '白色', '灰色', '粉色', '紫色', '黄色', '绿色', '橙色', '棕色', '米色', '卡其色'];
   const clothingItems = ['外套', '衣服', '裙子', '裤子', '衬衫', 'T恤', '毛衣', '卫衣', '连衣裙', '牛仔裤', '短裤', '短裙', '风衣', '夹克', '西装', '吊带', '背心', '开衫', '针织衫'];
   
@@ -147,7 +147,6 @@ const getOutfitSuggestion = (_city?: string, userMessage?: string): string => {
   let detectedItem = '';
   
   if (userMessage) {
-    const lowerMsg = userMessage.toLowerCase();
     for (const color of colors) {
       if (userMessage.includes(color)) {
         detectedColor = color;

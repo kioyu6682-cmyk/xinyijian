@@ -588,11 +588,11 @@ const PROMPTS: Record<ModuleType, PromptData[]> = {
 };
 
 interface PromptDetailPageProps {
-  module: ModuleType;
-  onClose: () => void;
+  module?: ModuleType;
+  onClose?: () => void;
 }
 
-export const PromptDetailPage: React.FC<PromptDetailPageProps> = ({ module, onClose }) => {
+export const PromptDetailPage: React.FC<PromptDetailPageProps> = ({ module = 'home', onClose }) => {
   const [selectedPrompt, setSelectedPrompt] = useState<PromptData | null>(null);
   const [showFullPrompt, setShowFullPrompt] = useState(false);
   
@@ -605,10 +605,18 @@ export const PromptDetailPage: React.FC<PromptDetailPageProps> = ({ module, onCl
     me: '我的'
   };
 
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+    } else {
+      window.dispatchEvent(new CustomEvent('navigate', { detail: { page: 'me' } }));
+    }
+  };
+
   return (
     <div className="prompt-detail-page">
       <div className="prompt-detail-page__header">
-        <button type="button" className="prompt-detail-page__back" onClick={onClose}>
+        <button type="button" className="prompt-detail-page__back" onClick={handleClose}>
           <BackIcon size={20} /> 返回
         </button>
         <h1 className="prompt-detail-page__title">{moduleNames[module]} - AI提示词</h1>

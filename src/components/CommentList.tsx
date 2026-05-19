@@ -21,7 +21,7 @@ interface CommentListProps {
   onRefresh?: () => void;
 }
 
-export const CommentList: React.FC<CommentListProps> = ({ postId, onRefresh }) => {
+export const CommentList: React.FC<CommentListProps> = ({ postId }) => {
   const { user } = useAuth();
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);

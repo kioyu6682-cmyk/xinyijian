@@ -28,7 +28,7 @@ const MOCK_OUTFITS = [
 ];
 
 export const FavoritesPage: React.FC = () => {
-  const { user } = useAuth();
+  useAuth();
   const { items } = useWardrobeContext();
   const [activeTab, setActiveTab] = useState<'outfits' | 'items'>('outfits');
   

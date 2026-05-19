@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import Calendar from '../components/Calendar';
-import type { Outfit, Weather } from '../types';
+import type { Outfit } from '../types';
 
 // 模拟数据
 const mockOutfits: Outfit[] = [
@@ -12,15 +12,31 @@ const mockOutfits: Outfit[] = [
       { itemId: '2', position: 2, layer: 1 },
       { itemId: '3', position: 3, layer: 3 },
     ],
-    occasion: 'casual',
+    occasion: 'home',
     style: 'casual',
     temperature: 22,
-    weather: { temperature: 22, condition: 'sunny', humidity: 60, windSpeed: 10 },
+    weather: { 
+      temperature: 22, 
+      condition: 'sunny', 
+      humidity: 60, 
+      windSpeed: 10,
+      feelsLike: 22,
+      uvIndex: 5,
+      precipitation: 0,
+      location: 'Beijing',
+      forecast: []
+    },
     season: 'spring',
     isAiGenerated: false,
     createdAt: new Date('2024-01-15'),
     updatedAt: new Date('2024-01-15'),
     thumbnail: '',
+    wearCount: 0,
+    isFavorite: false,
+    tags: [],
+    userId: '1',
+    likes: 0,
+    isPublic: false,
   },
   {
     id: '2',
@@ -33,12 +49,28 @@ const mockOutfits: Outfit[] = [
     occasion: 'commute',
     style: 'business',
     temperature: 18,
-    weather: { temperature: 18, condition: 'cloudy', humidity: 70, windSpeed: 15 },
+    weather: { 
+      temperature: 18, 
+      condition: 'cloudy', 
+      humidity: 70, 
+      windSpeed: 15,
+      feelsLike: 18,
+      uvIndex: 3,
+      precipitation: 10,
+      location: 'Beijing',
+      forecast: []
+    },
     season: 'spring',
     isAiGenerated: false,
     createdAt: new Date('2024-01-16'),
     updatedAt: new Date('2024-01-16'),
     thumbnail: '',
+    wearCount: 0,
+    isFavorite: false,
+    tags: [],
+    userId: '1',
+    likes: 0,
+    isPublic: false,
   },
   {
     id: '3',
@@ -51,17 +83,33 @@ const mockOutfits: Outfit[] = [
     occasion: 'date',
     style: 'sweet',
     temperature: 25,
-    weather: { temperature: 25, condition: 'sunny', humidity: 50, windSpeed: 8 },
+    weather: { 
+      temperature: 25, 
+      condition: 'sunny', 
+      humidity: 50, 
+      windSpeed: 8,
+      feelsLike: 25,
+      uvIndex: 6,
+      precipitation: 0,
+      location: 'Beijing',
+      forecast: []
+    },
     season: 'spring',
     isAiGenerated: false,
     createdAt: new Date('2024-01-18'),
     updatedAt: new Date('2024-01-18'),
     thumbnail: '',
+    wearCount: 0,
+    isFavorite: false,
+    tags: [],
+    userId: '1',
+    likes: 0,
+    isPublic: false,
   },
 ];
 
 const CalendarPage: React.FC = () => {
-  const [outfits, setOutfits] = useState<Outfit[]>(mockOutfits);
+  const [outfits] = useState<Outfit[]>(mockOutfits);
   const [selectedDate, setSelectedDate] = useState<string>('');
   const [showAddOutfitModal, setShowAddOutfitModal] = useState(false);
   const [viewingOutfit, setViewingOutfit] = useState<Outfit | null>(null);
@@ -289,7 +337,7 @@ const CalendarPage: React.FC = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">天气:</span>
-                  <span>{viewingOutfit.weather.condition === 'sunny' ? '晴天' : viewingOutfit.weather.condition === 'cloudy' ? '多云' : viewingOutfit.weather.condition === 'rainy' ? '雨天' : viewingOutfit.weather.condition}</span>
+                  <span>{viewingOutfit.weather?.condition === 'sunny' ? '晴天' : viewingOutfit.weather?.condition === 'cloudy' ? '多云' : viewingOutfit.weather?.condition === 'rainy' ? '雨天' : viewingOutfit.weather?.condition}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">季节:</span>

@@ -1,8 +1,8 @@
 import React from 'react';
-import type { Trend } from '../types';
+import type { StyleTrend } from '../types';
 
 interface TrendCardProps {
-  trend: Trend;
+  trend: StyleTrend;
 }
 
 const TrendCard: React.FC<TrendCardProps> = ({ trend }) => {
@@ -10,7 +10,7 @@ const TrendCard: React.FC<TrendCardProps> = ({ trend }) => {
     <div className="trend-card bg-white rounded-lg shadow-sm overflow-hidden">
       <div className="relative">
         <img 
-          src={trend.imageUrl} 
+          src={trend.images[0] || 'https://neeko-copilot.bytedance.net/api/text2image?prompt=fashion%20trend%20style%20elegant%20minimalist&size=800x600'} 
           alt={trend.title} 
           className="w-full h-48 object-cover"
         />
@@ -31,11 +31,9 @@ const TrendCard: React.FC<TrendCardProps> = ({ trend }) => {
         <h3 className="font-semibold mb-2">{trend.title}</h3>
         <p className="text-sm text-gray-600 mb-3">{trend.description}</p>
         <div className="flex flex-wrap gap-1 mb-3">
-          {trend.tags.map((tag, index) => (
-            <span key={index} className="px-2 py-1 bg-pink-100 text-pink-600 rounded-full text-xs">
-              {tag}
-            </span>
-          ))}
+          <span className="px-2 py-1 bg-pink-100 text-pink-600 rounded-full text-xs">
+            {trend.category}
+          </span>
         </div>
         <div className="flex justify-between items-center text-xs text-gray-500">
           <div className="flex space-x-4">
@@ -43,13 +41,13 @@ const TrendCard: React.FC<TrendCardProps> = ({ trend }) => {
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
-              {trend.likes}
+              {trend.popularity}
             </span>
             <span className="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
               </svg>
-              {trend.saves}
+              128
             </span>
           </div>
           <button className="px-3 py-1 bg-pink-500 text-white rounded-full text-xs">

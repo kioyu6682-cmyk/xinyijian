@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { aiService } from '../services/ai';
-import type { Outfit, ClothingItem, OutfitRating as OutfitRatingType } from '../types';
+import type { Outfit, ClothingItem, OutfitRating as OutfitRatingType, BodyData } from '../types';
 
 interface OutfitRatingProps {
   outfit: Outfit;
@@ -18,11 +18,23 @@ const OutfitRating: React.FC<OutfitRatingProps> = ({ outfit, items, bodyType }) 
     const generateRating = async () => {
       setIsLoading(true);
       try {
-        const result = aiService.rateOutfit(outfit, items, bodyType);
-        setRating(result);
+        const bodyData: BodyData | undefined = bodyType ? {
+          height: 0,
+          weight: 0,
+          bodyType: bodyType as BodyData['bodyType'],
+        } : undefined;
+        
+        const result = await aiService.rateOutfit(outfit, items, bodyData);
+        setRating({
+          ...result,
+          id: '',
+          outfitId: outfit.id,
+          userId: '',
+          createdAt: new Date(),
+        });
         
         // 生成风格标签
-        const diagnosis = aiService.generateStyleDiagnosis([outfit]);
+        const diagnosis = await aiService.generateStyleDiagnosis(items, [outfit]);
         setStyleTags(diagnosis.styleTags);
       } catch (error) {
         console.error('生成评分失败:', error);
@@ -37,7 +49,7 @@ const OutfitRating: React.FC<OutfitRatingProps> = ({ outfit, items, bodyType }) 
   // 计算总评分
   const getTotalScore = () => {
     if (!rating) return 0;
-    return Math.round((rating.colorScore + rating.styleScore + rating.occasionScore + rating.bodyScore) / 4);
+    return Math.round((rating.colorScore + rating.styleScore + rating.occasionScore + rating.bodyFitScore) / 4);
   };
 
   // 获取评分等级
@@ -125,14 +137,14 @@ const OutfitRating: React.FC<OutfitRatingProps> = ({ outfit, items, bodyType }) 
         <div>
           <div className="flex justify-between mb-1">
             <span className="text-sm font-medium">身材适配</span>
-            <span className={`text-sm ${getScoreColor(rating?.bodyScore || 0)}`}>
-              {rating?.bodyScore || 0}分
+            <span className={`text-sm ${getScoreColor(rating?.bodyFitScore || 0)}`}>
+              {rating?.bodyFitScore || 0}分
             </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className={`h-2 rounded-full ${getScoreColor(rating?.bodyScore || 0)}`}
-              style={{ width: `${(rating?.bodyScore || 0)}%` }}
+              className={`h-2 rounded-full ${getScoreColor(rating?.bodyFitScore || 0)}`}
+              style={{ width: `${(rating?.bodyFitScore || 0)}%` }}
             ></div>
           </div>
         </div>

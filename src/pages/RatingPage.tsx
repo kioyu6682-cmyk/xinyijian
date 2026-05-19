@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import OutfitRating from '../components/OutfitRating';
 import { useWardrobe } from '../hooks/useWardrobe';
-import type { Outfit, ClothingItem } from '../types';
+import type { Outfit } from '../types';
 
 const RatingPage: React.FC = () => {
   const { items } = useWardrobe();
   const [selectedOutfit, setSelectedOutfit] = useState<Outfit | null>(null);
   const [outfits, setOutfits] = useState<Outfit[]>([]);
-  const [bodyType, setBodyType] = useState<string>('沙漏形');
+  const [bodyType, setBodyType] = useState<string>('hourglass');
 
   // 模拟穿搭数据
   useEffect(() => {
@@ -16,32 +16,107 @@ const RatingPage: React.FC = () => {
       {
         id: '1',
         name: '通勤休闲',
-        items: ['1', '6', '11', '16'],
+        items: [
+          { itemId: '1', position: 1, layer: 1 },
+          { itemId: '6', position: 2, layer: 2 },
+          { itemId: '11', position: 3, layer: 3 },
+          { itemId: '16', position: 4, layer: 4 },
+        ],
         occasion: 'commute',
-        weather: 'sunny',
-        createdAt: new Date().toISOString(),
+        style: 'casual',
+        season: 'spring',
+        temperature: 22,
+        weather: { 
+          temperature: 22, 
+          condition: 'sunny', 
+          humidity: 60, 
+          windSpeed: 10,
+          feelsLike: 22,
+          uvIndex: 5,
+          precipitation: 0,
+          location: 'Beijing',
+          forecast: []
+        },
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        thumbnail: '',
+        wearCount: 0,
+        isAiGenerated: false,
+        isFavorite: true,
         tags: ['休闲', '通勤'],
-        isFavorite: true
+        userId: '1',
+        likes: 0,
+        isPublic: false,
       },
       {
         id: '2',
         name: '约会穿搭',
-        items: ['2', '7', '12', '17'],
+        items: [
+          { itemId: '2', position: 1, layer: 1 },
+          { itemId: '7', position: 2, layer: 2 },
+          { itemId: '12', position: 3, layer: 3 },
+          { itemId: '17', position: 4, layer: 4 },
+        ],
         occasion: 'date',
-        weather: 'sunny',
-        createdAt: new Date().toISOString(),
+        style: 'sweet',
+        season: 'spring',
+        temperature: 25,
+        weather: { 
+          temperature: 25, 
+          condition: 'sunny', 
+          humidity: 50, 
+          windSpeed: 8,
+          feelsLike: 25,
+          uvIndex: 6,
+          precipitation: 0,
+          location: 'Beijing',
+          forecast: []
+        },
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        thumbnail: '',
+        wearCount: 0,
+        isAiGenerated: false,
+        isFavorite: false,
         tags: ['甜美', '约会'],
-        isFavorite: false
+        userId: '1',
+        likes: 0,
+        isPublic: false,
       },
       {
         id: '3',
         name: '运动风格',
-        items: ['3', '8', '13', '18'],
-        occasion: 'sports',
-        weather: 'sunny',
-        createdAt: new Date().toISOString(),
+        items: [
+          { itemId: '3', position: 1, layer: 1 },
+          { itemId: '8', position: 2, layer: 2 },
+          { itemId: '13', position: 3, layer: 3 },
+          { itemId: '18', position: 4, layer: 4 },
+        ],
+        occasion: 'sport',
+        style: 'sporty',
+        season: 'summer',
+        temperature: 28,
+        weather: { 
+          temperature: 28, 
+          condition: 'sunny', 
+          humidity: 70, 
+          windSpeed: 12,
+          feelsLike: 30,
+          uvIndex: 8,
+          precipitation: 0,
+          location: 'Beijing',
+          forecast: []
+        },
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        thumbnail: '',
+        wearCount: 0,
+        isAiGenerated: false,
+        isFavorite: false,
         tags: ['运动', '休闲'],
-        isFavorite: false
+        userId: '1',
+        likes: 0,
+        isPublic: false,
       }
     ];
     setOutfits(mockOutfits);
@@ -49,7 +124,13 @@ const RatingPage: React.FC = () => {
   }, []);
 
   // 身材类型选项
-  const bodyTypes = ['沙漏形', '梨形', '苹果形', 'H型', '倒三角型'];
+  const bodyTypes = [
+    { value: 'hourglass', label: '沙漏形' },
+    { value: 'pear', label: '梨形' },
+    { value: 'apple', label: '苹果形' },
+    { value: 'rectangle', label: 'H型' },
+    { value: 'inverted-triangle', label: '倒三角型' },
+  ];
 
   if (!selectedOutfit) {
     return <div className="loading">加载中...</div>;
@@ -95,11 +176,11 @@ const RatingPage: React.FC = () => {
           <div className="flex flex-wrap gap-2">
             {bodyTypes.map(type => (
               <button
-                key={type}
-                className={`px-3 py-1 rounded-full text-sm ${bodyType === type ? 'bg-pink-500 text-white' : 'bg-gray-100 text-gray-800'}`}
-                onClick={() => setBodyType(type)}
+                key={type.value}
+                className={`px-3 py-1 rounded-full text-sm ${bodyType === type.value ? 'bg-pink-500 text-white' : 'bg-gray-100 text-gray-800'}`}
+                onClick={() => setBodyType(type.value)}
               >
-                {type}
+                {type.label}
               </button>
             ))}
           </div>
@@ -123,10 +204,10 @@ const RatingPage: React.FC = () => {
               </span>
             </div>
             <div className="grid grid-cols-4 gap-2 mb-4">
-              {selectedOutfit.items.slice(0, 4).map(itemId => {
-                const item = items.find(i => i.id === itemId);
+              {selectedOutfit.items.slice(0, 4).map((outfitItem) => {
+                const item = items.find(i => i.id === outfitItem.itemId);
                 return item ? (
-                  <div key={itemId} className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div key={outfitItem.itemId} className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
                     <span className="text-gray-400">👕</span>
                   </div>
                 ) : null;

@@ -334,7 +334,7 @@ export class AIService {
     }
 
     const recommendations: AIRecommendation[] = [];
-    const occasions: OccasionType[] = ['commute', 'date', 'casual', 'sport'];
+    const occasions: OccasionType[] = ['commute', 'date', 'home', 'sport'];
 
     for (let i = 0; i < Math.min(count, occasions.length); i++) {
       const occasion = occasions[i];
@@ -421,7 +421,7 @@ export class AIService {
   ): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    const occasions: OccasionType[] = ['commute', 'commute', 'commute', 'commute', 'commute', 'casual', 'casual'];
+    const occasions: OccasionType[] = ['commute', 'commute', 'commute', 'commute', 'commute', 'home', 'home'];
 
     // 记录已使用的单品
     const usedItemIds = new Set<string>();
@@ -558,7 +558,7 @@ export class AIService {
     // 解析场合
     if (input.includes('通勤')) result.occasion = 'commute';
     if (input.includes('约会')) result.occasion = 'date';
-    if (input.includes('休闲')) result.occasion = 'casual';
+    if (input.includes('休闲')) result.occasion = 'home';
     if (input.includes('运动')) result.occasion = 'sport';
 
     // 解析风格
@@ -579,7 +579,7 @@ export class AIService {
   }
 
   // 根据身材类型筛选单品
-  private filterItemsByBodyType(items: ClothingItem[], bodyType: BodyType): ClothingItem[] {
+  private filterItemsByBodyType(items: ClothingItem[], _bodyType?: string): ClothingItem[] {
     // 这里可以根据身材类型添加更具体的筛选逻辑
     // 暂时返回所有物品，后续可以根据实际需求优化
     return items;

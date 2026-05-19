@@ -45,19 +45,24 @@ export const supabaseWrapper = {
     }
 
     try {
-      let query = supabase.from(table).insert(data);
+      const query = supabase.from(table).insert(data);
       if (options.select) {
-        query = query.select().single();
+        const { data: result, error } = await query.select().single();
+        if (error) {
+          console.error(`Supabase插入错误 (${table}):`, error);
+          return null;
+        }
+        return result || null;
       }
       
-      const { data: result, error } = await query;
+      const { error } = await query;
       
       if (error) {
         console.error(`Supabase插入错误 (${table}):`, error);
         return null;
       }
       
-      return result || null;
+      return null;
     } catch (error) {
       console.warn(`Supabase插入失败 (${table})`);
       return null;
@@ -79,17 +84,24 @@ export const supabaseWrapper = {
       let query = supabase.from(table).update(data);
       query = filterFn(query);
       if (options.select) {
-        query = query.select().single();
+        const { data: result, error } = await query.select().single();
+        
+        if (error) {
+          console.error(`Supabase更新错误 (${table}):`, error);
+          return null;
+        }
+        
+        return result || null;
       }
       
-      const { data: result, error } = await query;
+      const { error } = await query;
       
       if (error) {
         console.error(`Supabase更新错误 (${table}):`, error);
         return null;
       }
       
-      return result || null;
+      return null;
     } catch (error) {
       console.warn(`Supabase更新失败 (${table})`);
       return null;

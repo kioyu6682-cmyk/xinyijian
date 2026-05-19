@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
-import type { ClothingItem, ClothingCategory } from '../types';
+import type { ClothingItem, ClothingCategory, PatternType, SeasonType, StyleType, OccasionType, FitType, SustainabilityInfo } from '../types';
 import { supabaseWrapper } from '../lib/supabaseWrapper';
+import { supabase } from '../lib/supabaseClient';
 import { useAuth } from '../context/AuthContext';
 import { OFFLINE_MODE, OFFLINE_CLOTHING_ITEMS } from '../config/offlineMode';
 
@@ -231,7 +232,7 @@ export function useWardrobe() {
     // 离线模式：直接使用预定义的离线数据
     if (OFFLINE_MODE) {
       console.log('使用离线模式');
-      setItems(OFFLINE_CLOTHING_ITEMS);
+      setItems(OFFLINE_CLOTHING_ITEMS as ClothingItem[]);
       localStorage.setItem('wardrobe_items', JSON.stringify(OFFLINE_CLOTHING_ITEMS));
       setIsLoading(false);
       return;
@@ -348,36 +349,37 @@ export function useWardrobe() {
     }, { select: true });
 
     if (data && typeof data === 'object' && 'id' in data) {
+      const itemData = data as Record<string, unknown>;
       const serverItem: ClothingItem = {
-        id: String(data.id),
-        name: String(data.name),
-        category: data.category as ClothingCategory,
-        subCategory: String(data.sub_category || ''),
-        brand: data.brand ? String(data.brand) : undefined,
-        color: String(data.color),
-        colors: Array.isArray(data.colors) ? data.colors : [],
-        pattern: String(data.pattern),
-        material: String(data.material),
-        season: Array.isArray(data.season) ? data.season : [],
-        style: Array.isArray(data.style) ? data.style : [],
-        occasion: Array.isArray(data.occasion) ? data.occasion : [],
-        size: String(data.size),
-        fit: String(data.fit),
-        price: Number(data.price) || 0,
-        purchaseDate: data.purchase_date ? new Date(data.purchase_date) : undefined,
-        purchaseChannel: data.purchase_channel ? String(data.purchase_channel) : undefined,
-        images: Array.isArray(data.images) ? data.images : [],
-        thumbnail: String(data.thumbnail || ''),
-        wearCount: Number(data.wear_count) || 0,
-        lastWorn: data.last_worn ? new Date(data.last_worn) : undefined,
-        isFavorite: Boolean(data.is_favorite),
-        isArchived: Boolean(data.is_archived),
-        tags: Array.isArray(data.tags) ? data.tags : [],
-        notes: data.notes ? String(data.notes) : undefined,
-        careInstructions: data.care_instructions ? String(data.care_instructions) : undefined,
-        sustainability: data.sustainability || { isRecycled: false },
-        createdAt: new Date(data.created_at),
-        updatedAt: new Date(data.updated_at),
+        id: String(itemData.id),
+        name: String(itemData.name),
+        category: itemData.category as ClothingCategory,
+        subCategory: String(itemData.sub_category || ''),
+        brand: itemData.brand ? String(itemData.brand) : undefined,
+        color: String(itemData.color),
+        colors: Array.isArray(itemData.colors) ? itemData.colors as string[] : [],
+        pattern: itemData.pattern as PatternType,
+        material: String(itemData.material),
+        season: [...(Array.isArray(itemData.season) ? itemData.season : [])] as SeasonType[],
+        style: [...(Array.isArray(itemData.style) ? itemData.style : [])] as StyleType[],
+        occasion: [...(Array.isArray(itemData.occasion) ? itemData.occasion : [])] as OccasionType[],
+        size: String(itemData.size),
+        fit: itemData.fit as FitType,
+        price: Number(itemData.price) || 0,
+        purchaseDate: itemData.purchase_date ? new Date(String(itemData.purchase_date)) : undefined,
+        purchaseChannel: itemData.purchase_channel ? String(itemData.purchase_channel) : undefined,
+        images: Array.isArray(itemData.images) ? itemData.images as string[] : [],
+        thumbnail: String(itemData.thumbnail || ''),
+        wearCount: Number(itemData.wear_count) || 0,
+        lastWorn: itemData.last_worn ? new Date(String(itemData.last_worn)) : undefined,
+        isFavorite: Boolean(itemData.is_favorite),
+        isArchived: Boolean(itemData.is_archived),
+        tags: Array.isArray(itemData.tags) ? itemData.tags as string[] : [],
+        notes: itemData.notes ? String(itemData.notes) : undefined,
+        careInstructions: itemData.care_instructions ? String(itemData.care_instructions) : undefined,
+        sustainability: (itemData.sustainability as SustainabilityInfo) || { isRecycled: false },
+        createdAt: new Date(String(itemData.created_at)),
+        updatedAt: new Date(String(itemData.updated_at)),
         userId: user.id
       };
       setItems(prev => [serverItem, ...prev]);
