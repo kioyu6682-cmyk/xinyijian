@@ -1,0 +1,199 @@
+.messages-page {
+  min-height: 100vh;
+  background: var(--xy-bg);
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0));
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--xy-surface-elevated);
+  border-bottom: 1px solid var(--xy-line);
+}
+
+.page-back {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--xy-line);
+  background: var(--xy-bg);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--xy-transition);
+}
+
+.page-back:hover {
+  background: var(--xy-accent-soft);
+  border-color: var(--xy-accent);
+}
+
+.page-title {
+  flex: 1;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+}
+
+.mark-read {
+  font-size: 0.82rem;
+  color: var(--xy-accent);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--xy-font);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  transition: var(--xy-transition);
+}
+
+.mark-read:hover {
+  background: var(--xy-accent-soft);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0.75rem 1.25rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: var(--xy-surface);
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--xy-ink-muted);
+  font-family: var(--xy-font);
+  transition: var(--xy-transition);
+}
+
+.tab-btn.active {
+  background: var(--xy-surface-elevated);
+  color: var(--xy-accent);
+  box-shadow: var(--xy-shadow-sm);
+}
+
+.messages-content {
+  padding: 0 1.25rem;
+}
+
+.message-group {
+  background: var(--xy-surface-elevated);
+  border-radius: var(--xy-radius-md);
+  border: 1px solid var(--xy-line);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--xy-line);
+  cursor: pointer;
+  font-family: var(--xy-font);
+  width: 100%;
+  text-align: left;
+  transition: var(--xy-transition);
+}
+
+.group-header:hover {
+  background: var(--xy-accent-soft);
+}
+
+.group-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: var(--xy-pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.group-title {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+}
+
+.unread-badge {
+  background: var(--xy-accent);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+.message-list {
+  padding: 0.5rem 0;
+}
+
+.message-item {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--xy-line);
+  transition: var(--xy-transition);
+}
+
+.message-item:last-child {
+  border-bottom: none;
+}
+
+.message-item:hover {
+  background: var(--xy-bg);
+}
+
+.message-item.unread {
+  background: var(--xy-accent-soft);
+}
+
+.message-text {
+  font-size: 0.85rem;
+  color: var(--xy-ink);
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+.message-time {
+  font-size: 0.68rem;
+  color: var(--xy-ink-muted);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  font-size: 0.95rem;
+  color: var(--xy-ink-muted);
+}

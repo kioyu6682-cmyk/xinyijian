@@ -1,0 +1,37 @@
+{
+  "current": {
+    "temperature": 23,
+    "feelsLike": 21,
+    "humidity": 75,
+    "condition": "rainy",
+    "windSpeed": 12,
+    "uvIndex": 2,
+    "precipitation": 0.8,
+    "location": "上海市静安区",
+    "forecast": [
+      {
+        "date": "2026-04-14",
+        "temperature": 25,
+        "condition": "cloudy",
+        "precipitation": 0.1
+      },
+      {
+        "date": "2026-04-15",
+        "temperature": 27,
+        "condition": "sunny",
+        "precipitation": 0
+      },
+      {
+        "date": "2026-04-16",
+        "temperature": 22,
+        "condition": "rainy",
+        "precipitation": 0.6
+      }
+    ]
+  },
+  "suggestions": {
+    "clothing": "建议穿着防风外套，内搭透气针织衫",
+    "accessories": "记得带伞，建议穿防滑鞋",
+    "skin": "湿度较高，注意皮肤保湿"
+  }
+}

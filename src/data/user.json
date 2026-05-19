@@ -1,0 +1,53 @@
+{
+  "user": {
+    "id": "user_001",
+    "name": "小美",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=xiaomei",
+    "email": "xiaomei@example.com",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2026-04-13T10:30:00Z",
+    "preferences": {
+      "style": [
+        "minimalist",
+        "business",
+        "casual"
+      ],
+      "colorPalette": [
+        "#2D3436",
+        "#636E72",
+        "#B2BEC3",
+        "#DFE6E9",
+        "#FF7675"
+      ],
+      "occasion": [
+        "commute",
+        "date",
+        "party"
+      ],
+      "notification": true,
+      "privacy": {
+        "shareWardrobe": false,
+        "shareOutfits": true,
+        "allowRecommendations": true
+      }
+    },
+    "bodyData": {
+      "height": 165,
+      "weight": 52,
+      "bust": 84,
+      "waist": 64,
+      "hips": 88,
+      "shoulder": 38,
+      "bodyType": "hourglass",
+      "skinTone": "fair"
+    },
+    "stats": {
+      "totalItems": 128,
+      "totalValue": 32000,
+      "utilizationRate": 0.85,
+      "carbonSaved": 12.5,
+      "outfitsCreated": 256,
+      "communityLikes": 1024
+    }
+  }
+}

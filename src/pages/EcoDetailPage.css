@@ -1,0 +1,152 @@
+.eco-detail-page {
+  min-height: 100vh;
+  padding: 0 1.25rem calc(2rem + env(safe-area-inset-bottom, 0));
+  background: var(--xy-bg-gradient);
+}
+
+.eco-hero {
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.eco-hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.eco-hero-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--xy-ink);
+  margin-bottom: 0.3rem;
+}
+
+.eco-hero-sub {
+  font-size: 0.85rem;
+  color: var(--xy-ink-muted);
+  margin-bottom: 1.5rem;
+}
+
+.eco-hero-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.eco-hero-num {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--xy-pink-700);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.eco-hero-unit {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--xy-accent);
+}
+
+.eco-hero-desc {
+  font-size: 0.82rem;
+  color: var(--xy-ink-muted);
+}
+
+.eco-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.eco-card-item {
+  background: var(--xy-gradient-card);
+  border: 1px solid var(--xy-line);
+  border-radius: var(--xy-radius-md);
+  padding: 1rem;
+  box-shadow: var(--xy-shadow-sm);
+  transition: var(--xy-transition);
+}
+
+.eco-card-item:hover {
+  transform: translateX(4px);
+  border-color: var(--xy-pink-300);
+}
+
+.eco-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.eco-card-icon {
+  font-size: 1.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--xy-gradient-soft);
+  border-radius: var(--xy-radius-sm);
+  flex-shrink: 0;
+}
+
+.eco-card-info {
+  flex: 1;
+}
+
+.eco-card-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--xy-ink-muted);
+  margin-bottom: 0.15rem;
+}
+
+.eco-card-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--xy-accent);
+}
+
+.eco-card-value small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--xy-ink-muted);
+}
+
+.eco-card-detail {
+  font-size: 0.8rem;
+  color: var(--xy-ink-muted);
+  line-height: 1.6;
+  padding-left: 3.65rem;
+}
+
+.eco-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.eco-tip {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--xy-gradient-card);
+  border: 1px solid var(--xy-line);
+  border-radius: var(--xy-radius-md);
+  padding: 1rem;
+}
+
+.eco-tip-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.eco-tip p {
+  font-size: 0.82rem;
+  color: var(--xy-ink-muted);
+  line-height: 1.6;
+}

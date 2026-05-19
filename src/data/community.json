@@ -1,0 +1,147 @@
+{
+  "challenges": [
+    {
+      "id": "challenge_001",
+      "title": "🎯 腰带魔法挑战赛",
+      "description": "用一条腰带改造你的旧装，展示搭配巧思！",
+      "theme": "accessory",
+      "coverImage": "https://neeko-copilot.bytedance.net/api/text2image?prompt=fashion%20belt%20accessory%20styling%20challenge%20elegant%20minimalist%20fashion%20photography&size=800x600",
+      "startDate": "2026-04-10T00:00:00Z",
+      "endDate": "2026-04-20T23:59:59Z",
+      "participants": 2340,
+      "submissions": [],
+      "prizes": [
+        "年度最佳搭配师称号",
+        "500元购物基金",
+        "心衣间年度会员"
+      ],
+      "rules": [
+        "必须使用腰带",
+        "搭配现有衣橱单品",
+        "发布穿搭心得"
+      ],
+      "isActive": true,
+      "isJoined": false
+    }
+  ],
+  "bottles": [
+    {
+      "id": "bottle_001",
+      "item": {
+        "id": "item_004",
+        "name": "碎花连衣裙",
+        "thumbnail": "👗",
+        "category": "dresses",
+        "image": "https://neeko-copilot.bytedance.net/api/text2image?prompt=dusty%20blue%20floral%20chiffon%20dress%20fashion%20product%20photo%20minimalist&size=512x512"
+      },
+      "sender": {
+        "id": "user_002",
+        "name": "时尚达人小雅",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=xiaoya"
+      },
+      "message": "这条裙子很漂亮，但不太适合我的风格，希望找到有缘人",
+      "status": "floating",
+      "createdAt": "2026-04-01T10:00:00Z",
+      "ecoImpact": {
+        "carbonSaved": 8.5,
+        "waterSaved": 1200,
+        "wasteReduced": 1
+      }
+    },
+    {
+      "id": "bottle_002",
+      "item": {
+        "id": "item_045",
+        "name": "高跟鞋",
+        "thumbnail": "👠",
+        "category": "shoes",
+        "image": "https://neeko-copilot.bytedance.net/api/text2image?prompt=elegant%20black%20high%20heels%20fashion%20product%20photo%20minimalist%20white%20background&size=512x512"
+      },
+      "sender": {
+        "id": "user_003",
+        "name": "职场精英Lisa",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=lisa"
+      },
+      "receiver": {
+        "id": "user_004",
+        "name": "穿搭新手小王",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=xiaowang"
+      },
+      "message": "只穿过一次，希望给需要的人",
+      "status": "matched",
+      "createdAt": "2026-03-15T14:00:00Z",
+      "matchedAt": "2026-03-20T09:00:00Z",
+      "ecoImpact": {
+        "carbonSaved": 5.2,
+        "waterSaved": 800,
+        "wasteReduced": 1
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_001",
+      "type": "outfit-share",
+      "author": {
+        "id": "user_002",
+        "name": "时尚达人小雅",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=xiaoya"
+      },
+      "content": "今天这套搭配被同事夸了！风衣+牛仔裤真的是永不过时的组合 👗✨ #OOTD #通勤穿搭",
+      "images": [
+        "https://neeko-copilot.bytedance.net/api/text2image?prompt=woman%20wearing%20camel%20trench%20coat%20and%20blue%20jeans%20fashion%20street%20style%20photography%20elegant&size=800x1000",
+        "https://neeko-copilot.bytedance.net/api/text2image?prompt=close%20up%20fashion%20detail%20camel%20coat%20style%20minimalist%20photography&size=800x1000"
+      ],
+      "tags": [
+        "通勤",
+        "风衣",
+        "简约"
+      ],
+      "likes": 1234,
+      "comments": [
+        {
+          "id": "comment_001",
+          "author": {
+            "id": "user_005",
+            "name": "穿搭爱好者",
+            "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=lover"
+          },
+          "content": "太美了！求风衣链接",
+          "likes": 23,
+          "replies": [],
+          "createdAt": "2026-04-13T09:00:00Z"
+        }
+      ],
+      "shares": 89,
+      "isLiked": false,
+      "isSaved": false,
+      "createdAt": "2026-04-13T08:30:00Z",
+      "updatedAt": "2026-04-13T08:30:00Z"
+    },
+    {
+      "id": "post_002",
+      "type": "style-tip",
+      "author": {
+        "id": "user_006",
+        "name": "设计师阿凯",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=kai"
+      },
+      "content": "💡 穿搭小技巧：梨形身材的女生可以选择A字裙来平衡上下身比例，避免紧身下装。记住：上紧下松是王道！",
+      "images": [
+        "https://neeko-copilot.bytedance.net/api/text2image?prompt=fashion%20infographic%20pear%20body%20shape%20style%20guide%20A%20line%20skirt%20elegant%20minimalist%20illustration&size=800x600"
+      ],
+      "tags": [
+        "穿搭技巧",
+        "梨形身材",
+        "A字裙"
+      ],
+      "likes": 3456,
+      "comments": [],
+      "shares": 567,
+      "isLiked": true,
+      "isSaved": true,
+      "createdAt": "2026-04-12T15:00:00Z",
+      "updatedAt": "2026-04-12T15:00:00Z"
+    }
+  ]
+}

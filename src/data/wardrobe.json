@@ -1,0 +1,393 @@
+{
+  "items": [
+    {
+      "id": "item_001",
+      "name": "丝质白衬衫",
+      "category": "tops",
+      "subCategory": "衬衫",
+      "brand": "优衣库",
+      "color": "白色",
+      "colors": [
+        "#FFFFFF",
+        "#F8F9FA"
+      ],
+      "pattern": "solid",
+      "material": "丝绸",
+      "season": [
+        "spring",
+        "summer",
+        "autumn"
+      ],
+      "style": [
+        "business",
+        "minimalist"
+      ],
+      "occasion": [
+        "commute",
+        "interview",
+        "date"
+      ],
+      "size": "M",
+      "fit": "regular",
+      "price": 299,
+      "purchaseDate": "2024-03-15T10:00:00Z",
+      "purchaseChannel": "线下门店",
+      "images": [
+        "shirt_001_front.jpg",
+        "shirt_001_back.jpg"
+      ],
+      "thumbnail": "👔",
+      "wearCount": 8,
+      "lastWorn": "2025-02-28T08:00:00Z",
+      "isFavorite": true,
+      "isArchived": false,
+      "tags": [
+        "基础款",
+        "百搭",
+        "职场必备"
+      ],
+      "notes": "需要手洗，容易皱",
+      "careInstructions": "手洗，低温熨烫",
+      "sustainability": {
+        "isRecycled": false,
+        "materialSource": "可持续丝绸"
+      },
+      "createdAt": "2024-03-15T10:00:00Z",
+      "updatedAt": "2025-02-28T08:00:00Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "item_002",
+      "name": "卡其色风衣",
+      "category": "outerwear",
+      "subCategory": "风衣",
+      "brand": "Burberry",
+      "color": "卡其色",
+      "colors": [
+        "#C4A77D",
+        "#8B7355"
+      ],
+      "pattern": "solid",
+      "material": "棉混纺",
+      "season": [
+        "spring",
+        "autumn"
+      ],
+      "style": [
+        "business",
+        "luxury"
+      ],
+      "occasion": [
+        "commute",
+        "travel",
+        "date"
+      ],
+      "size": "L",
+      "fit": "regular",
+      "price": 8999,
+      "purchaseDate": "2024-09-20T14:30:00Z",
+      "purchaseChannel": "官网",
+      "images": [
+        "trench_001_front.jpg"
+      ],
+      "thumbnail": "🧥",
+      "wearCount": 23,
+      "lastWorn": "2026-04-10T07:30:00Z",
+      "isFavorite": true,
+      "isArchived": false,
+      "tags": [
+        "经典款",
+        "投资单品",
+        "英伦风"
+      ],
+      "notes": "春秋必备，非常百搭",
+      "careInstructions": "干洗",
+      "sustainability": {
+        "isRecycled": false,
+        "ethicalCertification": [
+          "B Corp"
+        ]
+      },
+      "createdAt": "2024-09-20T14:30:00Z",
+      "updatedAt": "2026-04-10T07:30:00Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "item_003",
+      "name": "高腰直筒牛仔裤",
+      "category": "bottoms",
+      "subCategory": "牛仔裤",
+      "brand": "Levi's",
+      "color": "深蓝色",
+      "colors": [
+        "#1E3A5F",
+        "#2C4F7C"
+      ],
+      "pattern": "solid",
+      "material": "牛仔布",
+      "season": [
+        "all"
+      ],
+      "style": [
+        "casual",
+        "minimalist"
+      ],
+      "occasion": [
+        "commute",
+        "date",
+        "travel"
+      ],
+      "size": "27",
+      "fit": "regular",
+      "price": 699,
+      "purchaseDate": "2025-01-10T11:00:00Z",
+      "purchaseChannel": "天猫旗舰店",
+      "images": [
+        "jeans_001_front.jpg",
+        "jeans_001_detail.jpg"
+      ],
+      "thumbnail": "👖",
+      "wearCount": 15,
+      "lastWorn": "2026-04-12T08:00:00Z",
+      "isFavorite": true,
+      "isArchived": false,
+      "tags": [
+        "新购入",
+        "显瘦",
+        "高腰"
+      ],
+      "notes": "刚买的，版型很好",
+      "careInstructions": "机洗，反面洗涤",
+      "sustainability": {
+        "isRecycled": true,
+        "materialSource": "Water<Less技术"
+      },
+      "createdAt": "2025-01-10T11:00:00Z",
+      "updatedAt": "2026-04-12T08:00:00Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "item_004",
+      "name": "碎花连衣裙",
+      "category": "dresses",
+      "subCategory": "连衣裙",
+      "brand": "ZARA",
+      "color": "粉色",
+      "colors": [
+        "#FFB6C1",
+        "#FF69B4",
+        "#FFFFFF"
+      ],
+      "pattern": "floral",
+      "material": "雪纺",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "style": [
+        "bohemian",
+        "casual"
+      ],
+      "occasion": [
+        "date",
+        "party",
+        "travel"
+      ],
+      "size": "S",
+      "fit": "loose",
+      "price": 399,
+      "purchaseDate": "2024-05-20T16:00:00Z",
+      "purchaseChannel": "APP",
+      "images": [
+        "dress_001_front.jpg"
+      ],
+      "thumbnail": "👗",
+      "wearCount": 3,
+      "lastWorn": "2025-02-10T19:00:00Z",
+      "isFavorite": false,
+      "isArchived": false,
+      "tags": [
+        "沉睡",
+        "约会裙",
+        "春夏"
+      ],
+      "notes": "买了很久只穿过几次，需要搭配灵感",
+      "careInstructions": "手洗",
+      "sustainability": {
+        "isRecycled": false
+      },
+      "createdAt": "2024-05-20T16:00:00Z",
+      "updatedAt": "2025-02-10T19:00:00Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "item_005",
+      "name": "小白鞋",
+      "category": "shoes",
+      "subCategory": "运动鞋",
+      "brand": "Common Projects",
+      "color": "白色",
+      "colors": [
+        "#FFFFFF",
+        "#F5F5F5"
+      ],
+      "pattern": "solid",
+      "material": "皮革",
+      "season": [
+        "all"
+      ],
+      "style": [
+        "minimalist",
+        "casual"
+      ],
+      "occasion": [
+        "commute",
+        "date",
+        "travel",
+        "sport"
+      ],
+      "size": "38",
+      "fit": "regular",
+      "price": 2800,
+      "purchaseDate": "2024-02-14T10:00:00Z",
+      "purchaseChannel": "Farfetch",
+      "images": [
+        "shoes_001_side.jpg"
+      ],
+      "thumbnail": "👟",
+      "wearCount": 56,
+      "lastWorn": "2026-04-13T07:00:00Z",
+      "isFavorite": true,
+      "isArchived": false,
+      "tags": [
+        "百搭之王",
+        "投资单品",
+        "每天穿"
+      ],
+      "notes": "最百搭的鞋，已经穿回本了",
+      "careInstructions": "皮革护理",
+      "sustainability": {
+        "isRecycled": false,
+        "ethicalCertification": [
+          "Made in Italy"
+        ]
+      },
+      "createdAt": "2024-02-14T10:00:00Z",
+      "updatedAt": "2026-04-13T07:00:00Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "item_006",
+      "name": "皮质托特包",
+      "category": "bags",
+      "subCategory": "手提包",
+      "brand": "Longchamp",
+      "color": "棕色",
+      "colors": [
+        "#8B4513",
+        "#A0522D"
+      ],
+      "pattern": "solid",
+      "material": "皮革",
+      "season": [
+        "all"
+      ],
+      "style": [
+        "business",
+        "casual"
+      ],
+      "occasion": [
+        "commute",
+        "travel",
+        "date"
+      ],
+      "size": "中号",
+      "fit": "regular",
+      "price": 3200,
+      "purchaseDate": "2024-08-15T13:00:00Z",
+      "purchaseChannel": "专柜",
+      "images": [
+        "bag_001_front.jpg"
+      ],
+      "thumbnail": "🎒",
+      "wearCount": 12,
+      "lastWorn": "2026-04-08T08:00:00Z",
+      "isFavorite": true,
+      "isArchived": false,
+      "tags": [
+        "通勤包",
+        "能装",
+        "经典"
+      ],
+      "notes": "通勤必备，装电脑刚好",
+      "careInstructions": "专业护理",
+      "sustainability": {
+        "isRecycled": false
+      },
+      "createdAt": "2024-08-15T13:00:00Z",
+      "updatedAt": "2026-04-08T08:00:00Z",
+      "userId": "user_001"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tops",
+      "name": "上衣",
+      "icon": "👔",
+      "count": 45
+    },
+    {
+      "id": "bottoms",
+      "name": "下装",
+      "icon": "👖",
+      "count": 28
+    },
+    {
+      "id": "dresses",
+      "name": "连衣裙",
+      "icon": "👗",
+      "count": 15
+    },
+    {
+      "id": "outerwear",
+      "name": "外套",
+      "icon": "🧥",
+      "count": 18
+    },
+    {
+      "id": "shoes",
+      "name": "鞋履",
+      "icon": "👟",
+      "count": 12
+    },
+    {
+      "id": "bags",
+      "name": "包袋",
+      "icon": "🎒",
+      "count": 6
+    },
+    {
+      "id": "accessories",
+      "name": "配饰",
+      "icon": "💍",
+      "count": 4
+    }
+  ],
+  "stats": {
+    "totalItems": 128,
+    "totalValue": 32000,
+    "utilizationRate": 0.85,
+    "mostWornItem": "item_005",
+    "sleepingItems": [
+      "item_004",
+      "item_007",
+      "item_012"
+    ],
+    "favoriteCategory": "tops",
+    "recentAdditions": [
+      "item_003",
+      "item_045",
+      "item_067"
+    ]
+  }
+}

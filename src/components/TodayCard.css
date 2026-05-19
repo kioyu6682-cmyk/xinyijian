@@ -1,0 +1,211 @@
+.today-card {
+  position: relative;
+  border-radius: var(--xy-radius-lg);
+  padding: 1.45rem 1.35rem 1.35rem;
+  color: var(--xy-surface);
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--xy-pink-700) 0%, var(--xy-pink-800) 100%);
+  box-shadow: 0 12px 40px rgba(150, 57, 73, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.today-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(255, 200, 210, 0.18) 0%, transparent 55%);
+}
+
+.today-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+}
+
+.today-card--interactive {
+  cursor: pointer;
+}
+
+.today-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+.weather-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: var(--xy-transition);
+}
+
+.weather-badge:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+}
+
+.weather-loc {
+  opacity: 0.75;
+  font-weight: 400;
+}
+
+.today-card__hint {
+  font-size: 0.68rem;
+  opacity: 0.5;
+  max-width: 6rem;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.today-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.65rem;
+  font-feature-settings: 'palt' 1;
+}
+
+.today-reason {
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  opacity: 0.92;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.reason-chip {
+  display: inline-block;
+  margin: 0 0.15rem 0.2rem 0;
+  padding: 0.12rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.ar-preview {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.avatar-3d {
+  position: relative;
+  width: 6rem;
+  min-height: 8rem;
+  border-radius: var(--xy-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+}
+
+.avatar-3d__ring {
+  position: absolute;
+  inset: 8px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.avatar-3d__ring::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 200, 210, 0.15);
+}
+
+.avatar-3d__emoji {
+  font-size: 3rem;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+  animation: avatar-breathe 4s ease-in-out infinite;
+}
+
+@keyframes avatar-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.outfit-items {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.45rem;
+}
+
+.outfit-item-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.outfit-item-tag__emoji {
+  font-size: 0.95rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s var(--xy-ease), opacity 0.2s;
+  font-family: var(--xy-font);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--xy-surface);
+  color: var(--xy-ink);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--xy-surface);
+}

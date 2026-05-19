@@ -1,0 +1,100 @@
+.inspiration-page {
+  padding: 1.25rem;
+  min-height: 100%;
+  background: var(--xy-bg-gradient);
+}
+
+.inspiration-page .header {
+  margin-bottom: 1.25rem;
+}
+
+.inspiration-page .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.inspiration-page .prompt-btn {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--xy-line);
+  background: var(--xy-surface-elevated);
+  box-shadow: var(--xy-shadow-sm);
+  font-size: 1.45rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: var(--xy-transition);
+  position: relative;
+}
+
+.inspiration-page .prompt-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--xy-accent-soft) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.inspiration-page .prompt-btn:hover {
+  background: var(--xy-accent-soft);
+  transform: scale(1.08);
+  border-color: var(--xy-pink-300);
+  box-shadow: var(--xy-shadow);
+}
+
+.inspiration-page .prompt-btn:hover::before {
+  opacity: 1;
+}
+
+.inspiration-page .prompt-btn:active {
+  transform: scale(0.95);
+}
+
+.inspiration-page .tabs {
+  border-bottom-color: var(--xy-line);
+}
+
+.inspiration-page .content {
+  padding-top: 1.25rem;
+}
+
+.inspiration-page .section-header {
+  margin-bottom: 1.25rem;
+}
+
+.inspiration-page .trends-section,
+.inspiration-page .inspiration-section,
+.inspiration-page .tutorials-section {
+  margin-bottom: 2.25rem;
+}
+
+.inspiration-page .filters select {
+  border-color: var(--xy-line);
+  background: var(--xy-surface-elevated);
+  color: var(--xy-ink-muted);
+  border-radius: var(--xy-radius-sm);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--xy-font);
+  cursor: pointer;
+  transition: var(--xy-transition);
+}
+
+.inspiration-page .filters select:hover {
+  border-color: var(--xy-pink-300);
+  background: var(--xy-accent-soft);
+}
+
+.inspiration-page .filters select:focus {
+  outline: none;
+  border-color: var(--xy-accent);
+  box-shadow: 0 0 0 3px var(--xy-accent-soft);
+}

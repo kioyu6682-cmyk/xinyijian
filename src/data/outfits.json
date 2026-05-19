@@ -1,0 +1,187 @@
+{
+  "outfits": [
+    {
+      "id": "outfit_001",
+      "name": "简约通勤风",
+      "items": [
+        {
+          "itemId": "item_002",
+          "position": 1,
+          "layer": 3
+        },
+        {
+          "itemId": "item_001",
+          "position": 2,
+          "layer": 2
+        },
+        {
+          "itemId": "item_003",
+          "position": 3,
+          "layer": 2
+        },
+        {
+          "itemId": "item_005",
+          "position": 4,
+          "layer": 1
+        }
+      ],
+      "occasion": "commute",
+      "weather": {
+        "temperature": 23,
+        "condition": "rainy",
+        "humidity": 75
+      },
+      "temperature": 23,
+      "style": "minimalist",
+      "season": "spring",
+      "isAiGenerated": true,
+      "aiConfidence": 0.92,
+      "thumbnail": "🧥👔👖👟",
+      "wearCount": 5,
+      "lastWorn": "2026-04-10T07:30:00Z",
+      "isFavorite": true,
+      "tags": [
+        "通勤",
+        "雨天",
+        "经典"
+      ],
+      "notes": "23°C微雨天最佳搭配，防风又透气",
+      "createdAt": "2026-04-10T07:30:00Z",
+      "updatedAt": "2026-04-10T07:30:00Z",
+      "userId": "user_001",
+      "likes": 128,
+      "isPublic": true
+    },
+    {
+      "id": "outfit_002",
+      "name": "温柔约会装",
+      "items": [
+        {
+          "itemId": "item_004",
+          "position": 1,
+          "layer": 2
+        },
+        {
+          "itemId": "item_005",
+          "position": 2,
+          "layer": 1
+        },
+        {
+          "itemId": "item_006",
+          "position": 3,
+          "layer": 1
+        }
+      ],
+      "occasion": "date",
+      "weather": {
+        "temperature": 25,
+        "condition": "sunny",
+        "humidity": 60
+      },
+      "temperature": 25,
+      "style": "bohemian",
+      "season": "spring",
+      "isAiGenerated": true,
+      "aiConfidence": 0.88,
+      "thumbnail": "👗👟🎒",
+      "wearCount": 2,
+      "lastWorn": "2026-03-20T18:00:00Z",
+      "isFavorite": true,
+      "tags": [
+        "约会",
+        "碎花",
+        "温柔"
+      ],
+      "notes": "唤醒沉睡的碎花裙，适合春日约会",
+      "createdAt": "2026-03-20T18:00:00Z",
+      "updatedAt": "2026-03-20T18:00:00Z",
+      "userId": "user_001",
+      "likes": 256,
+      "isPublic": true
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec_001",
+      "type": "new-item",
+      "title": "新牛仔裤搭配灵感",
+      "description": "检测到您购入高腰直筒牛仔裤，这里有3种搭配方案",
+      "items": [
+        "item_003"
+      ],
+      "confidence": 0.95,
+      "reason": [
+        "基于您的衣橱历史",
+        "符合当前天气",
+        "适合您的体型"
+      ],
+      "context": {
+        "recentItems": [
+          "item_003"
+        ],
+        "timeOfDay": "morning"
+      },
+      "isRead": false,
+      "isApplied": false,
+      "createdAt": "2026-04-13T08:00:00Z"
+    },
+    {
+      "id": "rec_002",
+      "type": "sleeping-item",
+      "title": "沉睡衣物唤醒",
+      "description": "您的丝质衬衫已沉睡45天，不妨搭配半身裙重温一下？",
+      "items": [
+        "item_001"
+      ],
+      "confidence": 0.87,
+      "reason": [
+        "高价值单品",
+        "适合当前季节",
+        "可搭配现有下装"
+      ],
+      "context": {
+        "timeOfDay": "morning"
+      },
+      "isRead": false,
+      "isApplied": false,
+      "createdAt": "2026-04-13T08:00:00Z"
+    },
+    {
+      "id": "rec_003",
+      "type": "challenge",
+      "title": "本周穿搭挑战：腰带魔法",
+      "description": "用一条腰带改造你的旧装，展示搭配巧思！已有2.3k人参与",
+      "confidence": 0.9,
+      "reason": [
+        "社区热门活动",
+        "提升搭配技巧",
+        "赢取奖品"
+      ],
+      "context": {
+        "timeOfDay": "morning"
+      },
+      "isRead": false,
+      "isApplied": false,
+      "createdAt": "2026-04-13T08:00:00Z"
+    },
+    {
+      "id": "rec_004",
+      "type": "style-discovery",
+      "title": "风格盲盒：周末冒险搭配",
+      "description": "感觉墨守成规？AI为您推荐突破舒适区的风格尝试",
+      "confidence": 0.85,
+      "reason": [
+        "拓展风格边界",
+        "利用现有单品",
+        "个性化推荐"
+      ],
+      "context": {
+        "timeOfDay": "morning",
+        "userMood": "adventurous"
+      },
+      "isRead": false,
+      "isApplied": false,
+      "createdAt": "2026-04-13T08:00:00Z"
+    }
+  ]
+}

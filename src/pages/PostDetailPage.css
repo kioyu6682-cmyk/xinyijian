@@ -1,0 +1,128 @@
+.post-detail-page {
+  min-height: 100vh;
+  padding: 0 1.25rem calc(2rem + env(safe-area-inset-bottom, 0));
+  background: var(--xy-bg-gradient);
+}
+
+.post-detail-hero {
+  position: relative;
+  border-radius: var(--xy-radius-lg);
+  overflow: hidden;
+  margin: 0.5rem 0 1rem;
+  box-shadow: var(--xy-shadow-card);
+}
+
+.post-detail-img {
+  width: 100%;
+  height: auto;
+  max-height: 18rem;
+  object-fit: cover;
+  display: block;
+}
+
+.post-detail-tag {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: var(--xy-gradient-primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(229, 112, 130, 0.4);
+}
+
+.post-detail-body {
+  margin-bottom: 1.5rem;
+}
+
+.post-detail-author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.post-detail-avatar {
+  font-size: 1.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--xy-gradient-soft);
+  border-radius: 50%;
+  border: 2px solid var(--xy-line);
+}
+
+.post-detail-author {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+}
+
+.post-detail-excerpt {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+.post-detail-content {
+  font-size: 0.88rem;
+  color: var(--xy-ink-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.post-detail-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.post-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1.5px solid var(--xy-line);
+  background: var(--xy-surface-elevated);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--xy-ink-muted);
+  cursor: pointer;
+  font-family: var(--xy-font);
+  transition: var(--xy-transition);
+}
+
+.post-action-btn:hover {
+  border-color: var(--xy-pink-300);
+  background: var(--xy-accent-soft);
+}
+
+.post-action-btn.active {
+  color: var(--xy-accent);
+  border-color: var(--xy-pink-400);
+  background: var(--xy-accent-soft);
+}
+
+.post-action-btn--share {
+  margin-left: auto;
+}
+
+.post-detail-comments {
+  border-top: 1px solid var(--xy-line);
+  padding-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-comments-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+  margin-bottom: 1rem;
+}

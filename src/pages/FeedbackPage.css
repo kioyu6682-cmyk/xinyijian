@@ -1,0 +1,256 @@
+.feedback-page {
+  min-height: 100vh;
+  background: var(--xy-bg);
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0));
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--xy-surface-elevated);
+  border-bottom: 1px solid var(--xy-line);
+}
+
+.page-back {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--xy-line);
+  background: var(--xy-bg);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--xy-transition);
+}
+
+.page-back:hover {
+  background: var(--xy-accent-soft);
+  border-color: var(--xy-accent);
+}
+
+.page-title {
+  flex: 1;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+}
+
+.section-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--xy-accent);
+  padding: 1rem 1.25rem 0.5rem;
+}
+
+.help-section {
+  background: var(--xy-surface-elevated);
+  margin: 1rem;
+  border-radius: var(--xy-radius-lg);
+  border: 1px solid var(--xy-line);
+  overflow: hidden;
+}
+
+.faq-list {
+  padding: 0.5rem 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--xy-line);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--xy-font);
+  width: 100%;
+  text-align: left;
+  transition: var(--xy-transition);
+}
+
+.faq-header:hover {
+  background: var(--xy-accent-soft);
+}
+
+.faq-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--xy-pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--xy-accent);
+  flex-shrink: 0;
+}
+
+.faq-title {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--xy-ink);
+}
+
+.faq-content {
+  padding: 0 0.85rem 0.9rem 3.35rem;
+}
+
+.faq-content p {
+  font-size: 0.82rem;
+  color: var(--xy-ink-muted);
+  line-height: 1.6;
+}
+
+.feedback-section {
+  background: var(--xy-surface-elevated);
+  margin: 1rem;
+  border-radius: var(--xy-radius-lg);
+  border: 1px solid var(--xy-line);
+  padding: 1rem;
+}
+
+.feedback-type {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.type-btn {
+  flex: 1;
+  border: 1.5px solid var(--xy-line);
+  border-radius: 999px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--xy-bg);
+  color: var(--xy-ink-muted);
+  font-family: var(--xy-font);
+  transition: var(--xy-transition);
+}
+
+.type-btn.active {
+  background: var(--xy-accent-soft);
+  border-color: var(--xy-accent);
+  color: var(--xy-accent);
+}
+
+.feedback-input {
+  width: 100%;
+  min-height: 8rem;
+  border: 1.5px solid var(--xy-line);
+  border-radius: var(--xy-radius-md);
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  font-family: var(--xy-font);
+  background: var(--xy-bg);
+  color: var(--xy-ink);
+  resize: none;
+  transition: var(--xy-transition);
+  box-sizing: border-box;
+}
+
+.feedback-input:focus {
+  outline: none;
+  border-color: var(--xy-accent);
+  box-shadow: 0 0 0 3px var(--xy-accent-soft);
+}
+
+.feedback-input::placeholder {
+  color: var(--xy-ink-muted);
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--xy-gradient-primary);
+  color: var(--xy-surface);
+  cursor: pointer;
+  font-family: var(--xy-font);
+  margin-top: 0.85rem;
+  transition: var(--xy-transition);
+  box-shadow: 0 4px 16px rgba(232, 122, 138, 0.35);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 122, 138, 0.45);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn.submitted {
+  background: #22c55e;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
+}
+
+.contact-section {
+  background: var(--xy-surface-elevated);
+  margin: 1rem;
+  border-radius: var(--xy-radius-lg);
+  border: 1px solid var(--xy-line);
+  padding: 1rem;
+}
+
+.contact-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--xy-pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  color: var(--xy-ink-muted);
+  display: block;
+}
+
+.contact-value {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--xy-ink);
+}

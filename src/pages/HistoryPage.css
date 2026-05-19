@@ -1,0 +1,223 @@
+.history-page {
+  min-height: 100vh;
+  background: var(--xy-bg);
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0));
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--xy-surface-elevated);
+  border-bottom: 1px solid var(--xy-line);
+}
+
+.page-back {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--xy-line);
+  background: var(--xy-bg);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--xy-transition);
+}
+
+.page-back:hover {
+  background: var(--xy-accent-soft);
+  border-color: var(--xy-accent);
+}
+
+.page-title {
+  flex: 1;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--xy-ink);
+}
+
+.page-clear {
+  font-size: 0.85rem;
+  color: var(--xy-accent);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--xy-font);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  transition: var(--xy-transition);
+}
+
+.page-clear:hover {
+  background: var(--xy-accent-soft);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--xy-surface-elevated);
+  border-bottom: 1px solid var(--xy-line);
+}
+
+.filter-btn {
+  flex: 1;
+  border: 1.5px solid var(--xy-line);
+  border-radius: 999px;
+  padding: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--xy-bg);
+  color: var(--xy-ink-muted);
+  font-family: var(--xy-font);
+  transition: var(--xy-transition);
+}
+
+.filter-btn.active {
+  background: var(--xy-accent-soft);
+  border-color: var(--xy-accent);
+  color: var(--xy-accent);
+}
+
+.filter-btn:hover {
+  border-color: var(--xy-pink-300);
+}
+
+.history-content {
+  padding: 1rem 1.25rem;
+}
+
+.history-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--xy-accent);
+  margin-bottom: 0.75rem;
+}
+
+.view-list {
+  background: var(--xy-surface-elevated);
+  border-radius: var(--xy-radius-md);
+  border: 1px solid var(--xy-line);
+  overflow: hidden;
+}
+
+.view-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--xy-line);
+  transition: var(--xy-transition);
+}
+
+.view-item:last-child {
+  border-bottom: none;
+}
+
+.view-item:hover {
+  background: var(--xy-accent-soft);
+}
+
+.view-thumbnail {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--xy-radius-sm);
+  background: var(--xy-pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.view-name {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--xy-ink);
+}
+
+.view-time {
+  font-size: 0.7rem;
+  color: var(--xy-ink-muted);
+}
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.outfit-item {
+  background: var(--xy-surface-elevated);
+  border-radius: var(--xy-radius-md);
+  border: 1px solid var(--xy-line);
+  overflow: hidden;
+  transition: var(--xy-transition);
+}
+
+.outfit-item:hover {
+  box-shadow: var(--xy-shadow);
+}
+
+.outfit-image-wrapper {
+  aspect-ratio: 3/4;
+}
+
+.outfit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outfit-info {
+  padding: 0.5rem;
+}
+
+.outfit-thumbnails {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.outfit-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--xy-ink);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.outfit-time {
+  font-size: 0.65rem;
+  color: var(--xy-ink-muted);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  font-size: 0.95rem;
+  color: var(--xy-ink-muted);
+}

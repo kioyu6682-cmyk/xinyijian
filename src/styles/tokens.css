@@ -1,0 +1,60 @@
+:root {
+  --xy-bg: #fff5f7;
+  --xy-bg-gradient: linear-gradient(180deg, #ffeff2 0%, #fff0f4 40%, #fff5f7 100%);
+  --xy-surface: #ffffff;
+  --xy-surface-elevated: linear-gradient(145deg, #ffffff 0%, #fff5f7 50%, #ffeef1 100%);
+  --xy-ink: #3d3d42;
+  --xy-ink-muted: #85858a;
+  --xy-ink-subtle: #b8b8bd;
+  --xy-line: rgba(255, 175, 188, 0.35);
+  --xy-line-light: rgba(255, 175, 188, 0.18);
+  
+  --xy-accent: #e57082;
+  --xy-accent-light: #f7b3bf;
+  --xy-accent-soft: rgba(229, 112, 130, 0.18);
+  --xy-accent-glow: rgba(229, 112, 130, 0.45);
+  
+  --xy-pink-50: #ffedf0;
+  --xy-pink-100: #ffe0e7;
+  --xy-pink-200: #ffc5d2;
+  --xy-pink-300: #ffabbe;
+  --xy-pink-400: #ff8fa5;
+  --xy-pink-500: #e57082;
+  --xy-pink-600: #d05a6c;
+  --xy-pink-700: #b3475a;
+  --xy-pink-800: #963949;
+  
+  --xy-rose-gold: #d9a5a0;
+  --xy-rose-gold-light: #e8c5c0;
+  --xy-rose-gold-soft: rgba(217, 165, 160, 0.15);
+  
+  --xy-gold: #d4a574;
+  --xy-gold-light: #e8c9a0;
+  --xy-gold-soft: rgba(212, 165, 116, 0.15);
+  
+  --xy-lavender: #e8d5f2;
+  --xy-lavender-light: #f3e9fc;
+  --xy-lavender-soft: rgba(232, 213, 242, 0.2);
+  
+  --xy-radius-lg: 28px;
+  --xy-radius-md: 20px;
+  --xy-radius-sm: 12px;
+  --xy-radius-xs: 8px;
+  
+  --xy-shadow-sm: 0 2px 10px rgba(229, 112, 130, 0.08);
+  --xy-shadow: 0 4px 24px rgba(229, 112, 130, 0.1);
+  --xy-shadow-hover: 0 8px 36px rgba(229, 112, 130, 0.18);
+  --xy-shadow-card: 0 6px 28px rgba(229, 112, 130, 0.09);
+  --xy-shadow-glow: 0 0 40px rgba(229, 112, 130, 0.25);
+  
+  --xy-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --xy-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --xy-transition: all 0.35s var(--xy-ease);
+  --xy-transition-fast: all 0.18s var(--xy-ease);
+  
+  --xy-gradient-primary: linear-gradient(135deg, var(--xy-pink-400) 0%, var(--xy-pink-600) 100%);
+  --xy-gradient-soft: linear-gradient(145deg, var(--xy-pink-50) 0%, var(--xy-pink-200) 100%);
+  --xy-gradient-warm: linear-gradient(165deg, #ffe8ec 0%, #ffd0dc 40%, #ffc2d0 70%, #ffb8c6 100%);
+  --xy-gradient-elegant: linear-gradient(135deg, #fff0f3 0%, #ffe5ea 50%, #ffd8e1 100%);
+  --xy-gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 238, 241, 0.95) 100%);
+}
